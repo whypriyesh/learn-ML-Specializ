@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 # ==========================
 # 1. Load Dataset
 # ==========================
-data = pd.read_csv("student_scores.csv")
+data = pd.read_csv("data/student_scores.csv")
 
 X = data["Hours"].values
 y = data["Scores"].values
@@ -68,4 +68,5 @@ plt.xlabel("Hours Studied")
 plt.ylabel("Scores")
 plt.title("Linear Regression From Scratch")
 plt.legend()
-plt.show()
+plt.savefig("regression_plot.png")
+print("Plot saved to regression_plot.png")
